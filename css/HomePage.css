@@ -1,0 +1,192 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Changed font to Poppins, a more modern choice */
+    line-height: 1.6;
+    background-color: #f4f7f6; /* Lighter background for a cleaner look */
+    color: #333;
+}
+
+/* Color Variables for easy theme management */
+:root {
+    --primary-color: #4CAF50; /* A fresh green for primary actions */
+    --secondary-color: #2196F3; /* A vibrant blue for secondary actions/highlights */
+    --text-color: #333;
+    --light-text-color: #555;
+    --background-color: #f4f7f6;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+header {
+    background-color: var(--card-background);
+    padding: 15px 0; /* Slightly reduced padding */
+    box-shadow: 0 2px 4px var(--shadow-color); /* Softer shadow */
+}
+
+nav {
+    width: 90%; /* Increased width for more content space */
+    max-width: 1200px; /* Max width to prevent content from stretching too much */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo h1 {
+    font-size: 28px; /* Slightly larger logo */
+    color: var(--text-color);
+    font-weight: 700; /* Bolder font for logo */
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Used gap for spacing instead of margin-right */
+}
+
+nav .nav-links li {
+    margin-right: 20px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: var(--primary-color); /* Changed hover color */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center; /* Centered content */
+    align-items: center;
+    padding: 100px 20px; /* Increased padding */
+    background-color: var(--background-color); /* Using background variable */
+    text-align: center; /* Centered text for a neater look */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.hero-content {
+    width: 100%; /* Full width on small screens */
+    max-width: 700px; /* Max width for content */
+    margin-bottom: 40px; /* Added space below content on small screens */
+}
+
+.hero-content h2 {
+    font-size: 56px; /* Larger font size */
+    font-weight: 800; /* Extra bold */
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.hero-content h2 span {
+    color: var(--primary-color); /* Using primary color */
+}
+
+.hero-content p {
+    font-size: 22px; /* Slightly larger paragraph text */
+    margin-top: 15px; /* Adjusted margin */
+    color: var(--light-text-color);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero .buttons {
+    margin-top: 40px; /* Increased margin */
+    display: flex; /* Flexbox for buttons */
+    justify-content: center; /* Centered buttons */
+    gap: 20px; /* Space between buttons */
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 15px 35px; /* Increased padding */
+    border-radius: 8px; /* More rounded corners */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600; /* Slightly less bold */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    border: none; /* Removed default border */
+}
+
+.hire-btn {
+    background-color: var(--primary-color);
+}
+
+.chat-btn {
+    background-color: var(--secondary-color);
+}
+
+.hero .btn:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Image Styling */
+.hero-image {
+    width: 100%; /* Full width on small screens */
+    max-width: 400px; /* Max width for image */
+    margin-top: 40px; /* Added space above image on small screens */
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid var(--card-background); /* Border around image */
+    box-shadow: 0 10px 20px var(--shadow-color); /* Shadow for image */
+}
+
+/* Responsive adjustments for hero section */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row; /* Row direction on larger screens */
+        text-align: left; /* Left align text on larger screens */
+    }
+
+    .hero-content {
+        width: 50%;
+        margin-bottom: 0;
+        text-align: left;
+    }
+    
+    .hero-content h2 {
+        font-size: 64px;
+    }
+
+    .hero-content p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero .buttons {
+        justify-content: flex-start; /* Align buttons to start */
+    }
+
+    .hero-image {
+        width: 40%;
+        margin-top: 0;
+    }
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 25px; /* Increased padding */
+    background-color: var(--text-color); /* Darker footer */
+    color: #fff;
+    box-shadow: 0 -2px 4px var(--shadow-color); /* Shadow at the top of the footer */
+}

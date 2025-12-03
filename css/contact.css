@@ -1,0 +1,225 @@
+/* Color Variables */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #000000;
+    --text-color: #333;
+    --light-text-color: #555;
+    --background-color: #f4f7f6;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header Styling (reused from HomePage.css) */
+header {
+    background-color: var(--card-background);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+nav {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo h1 {
+    font-size: 28px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Contact Hero Section */
+.contact-hero {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.contact-hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.contact-hero p {
+    font-size: 20px;
+}
+
+/* Contact Details Section */
+.contact-details {
+    padding: 60px 0;
+    background-color: var(--background-color);
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.contact-details .info-item {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.contact-details .info-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-details .info-item i {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.contact-details .info-item h4 {
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.contact-details .info-item p {
+    font-size: 18px;
+    color: var(--light-text-color);
+}
+
+/* Contact Form */
+.contact-form-container {
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.contact-form-container h3 {
+    font-size: 32px;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn.submit-btn {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .btn.submit-btn:hover {
+    background-color: #333;
+}
+
+/* Footer Styling (reused from HomePage.css) */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--text-color);
+    color: #fff;
+    box-shadow: 0 -2px 4px var(--shadow-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-hero h2 {
+        font-size: 38px;
+    }
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-form-container {
+        padding: 25px;
+    }
+    .contact-form-container h3 {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Mohamad Shahfikri</title>
+    <link rel="stylesheet" href="../css/projectDetails.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Shahfikri</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="myProject.html">My Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="project-detail-hero">
+        <div class="hero-content">
+            <h2 id="project-title">Project Title</h2>
+            <p id="project-tagline">A brief description of the project.</p>
+        </div>
+    </section>
+
+    <section class="project-content">
+        <div class="container">
+            <img id="project-image" src="" alt="Project Image" class="main-project-image">
+            <p id="project-long-description">This is a detailed description of the project. It will cover the objectives, technologies used, challenges faced, and outcomes. The content here will be loaded dynamically based on the project selected from the My Projects page.</p>
+            
+            <div class="project-info-grid">
+                <div class="info-item">
+                    <h4>Category</h4>
+                    <p id="project-category">Web Development</p>
+                </div>
+                <div class="info-item">
+                    <h4>Technologies</h4>
+                    <p id="project-tech">HTML, CSS, JavaScript</p>
+                </div>
+                <div class="info-item">
+                    <h4>Role</h4>
+                    <p id="project-role">Developer</p>
+                </div>
+                <div class="info-item">
+                    <h4>Date</h4>
+                    <p id="project-date">October 2023</p>
+                </div>
+            </div>
+
+            <h3>Key Features</h3>
+            <ul id="project-features">
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+
+            <h3>Challenges & Solutions</h3>
+            <p id="project-challenges">Description of challenges encountered and how they were overcome.</p>
+            
+            <a href="#" id="project-live-link" class="btn live-demo-btn" target="_blank">Live Demo</a>
+            <a href="#" id="project-github-link" class="btn github-btn" target="_blank">GitHub Repo</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mohamad Shahfikri. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+
+            const projects = {
+                'workshopease': {
+                    title: 'WorkshopEase - Workshop Management System',
+                    tagline: 'A comprehensive system to manage workshops efficiently.',
+                    image: '../assets/logoUpdate.png',
+                    description: 'WorkshopEase is a full-stack application designed to streamline the process of managing workshops, from scheduling and registration to resource allocation and reporting. It aims to reduce administrative overhead and improve overall operational efficiency.',
+                    category: 'Web & Mobile Development',
+                    technologies: 'Flutter,JavaScript, HTML, CSS, Azure PostgreSql, Python, Firebase Notification',
+                    role: 'Full-stack Developer',
+                    date: 'March 2025 - Jun 2025',
+                    features: [
+                        '✅ User authentication and authorization (admin, staff, user)',
+                        '✅ Workshop creation and management',
+                        '✅ Resource scheduling',
+                        '✅ Reporting and analytics dashboard',
+                        '✅ Mobile application for users and Web application for admins'
+                    ],
+                    challenges: 'Integrating real-time notifications and ensuring data consistency across the mobile and web platforms were significant challenges. We utilized Firebase for push notifications and implemented robust API endpoints to maintain synchronization between the two platforms.',
+                    liveLink: 'https://www.youtube.com/watch?v=yD55KW9E6DU',
+                    githubLink: '#'
+                },
+                'grillz': {
+                    title: 'Grillz - Restaurant Order Management System',
+                    tagline: 'An efficient system for managing restaurant orders and inventory.',
+                    image: '../assets/Grillz.png',
+                    description: 'Grillz is a web-based application built to optimize restaurant operations. It features an intuitive interface for order taking,QR code ordering for customers, kitchen display, and inventory management, helping restaurants improve service speed and reduce waste.',
+                    category: 'Web Development',
+                    technologies: 'HTML, CSS, JavaScript, PHP, Azure PostgreSql',
+                    role: 'Frontend & Backend Developer',
+                    date: 'April 2025 - June 2025',
+                    features: [
+                        '✅ Order placement and tracking',
+                        '✅ Kitchen order display (KOD)',
+                        '✅ Inventory management',
+                        '✅ User roles (admin, waiter, chef)',
+                        '✅ Sales reporting'
+                    ],
+                    challenges: 'Ensuring data integrity and concurrency control for simultaneous orders was complex. We implemented robust database transactions and optimized SQL queries to handle high traffic efficiently.',
+                    liveLink: '#',
+                    githubLink: '#'
+                },
+                'mycare': {
+                    title: 'My Care Application',
+                    tagline: 'MYCare – Empowering Young Adults in Low-Income Communities with Access to Essential Resources',
+                    image: '../assets/MyCare.png',
+                    description: 'A mobile application designed to centralize access to essential support services for underserved communities. The app ensures young adults in low-income areas can easily discover and access real-time information on food banks, medical services, skill-building programs, and relevant news.',
+                    category: 'Mobile Application Development',
+                    technologies: 'Web Scraping, Dart, Flutter, Python',
+                    role: 'Frondend and Backend Developer',
+                    date: 'October 2024 - Februari 2025',
+                    features: [
+                        '✅ AI-Powered Chatbot Integrated with OpenAI to answer MYCare-related questions and guide users.',
+                        '✅ Real-Time Data via Web Scraping Automated Python scripts ensure live updates for food banks, healthcare services, and skill-building programs.',
+                        '✅ Google Maps Integration Seamless location services using Google Maps, Places API, and Geocoding to help users find nearby support.',
+                        '✅ Community Forum A space for users to share insights, tips, and support with one another.',
+                        '✅ User-friendly interface'
+                    ],
+                    challenges: 'Integrating real-time data through web scraping while ensuring app performance was challenging. We optimized our scraping scripts and implemented efficient data caching strategies to provide users with up-to-date information without compromising the app’s responsiveness.',
+                    liveLink: '#',
+                    githubLink: 'https://github.com/MuhdArshadd/MYCare'
+                },
+                'optimabank': {
+                    title: 'Optima Bank - Loyalty Program (Voucher) - GIFT Program',
+                    tagline: 'A website created to manage loyalty program vouchers for Optima Bank customers. ',
+                    image: '../assets/optimaBank.png',
+                    description: 'The Optima Bank Loyalty Program website is designed to facilitate the management and redemption of loyalty vouchers for customers. The platform allows users to view available vouchers, track their points, and redeem rewards seamlessly, enhancing customer engagement and satisfaction.',
+                    category: 'Website Development',
+                    technologies: 'Azure MySQL ,PhP, HTML, CSS, JavaScript',
+                    role: 'Backend Developer',
+                    date: 'September 2025',
+                    features: [
+                        '✅ Voucher catalog and redemption system',
+                        '✅ Personal Accounts: Users can login or register to claim and redeem vouchers.',
+                        '✅ Printable Voucher: After redeeming voucher, users can print into PDF.',
+                        '✅ AI Chatbot: Users can interact with the website’s integrated AI chatbot to assist them with inquiries'
+                    ],
+                    challenges: 'Developing a secure voucher redemption system to prevent fraud was a key challenge. We implemented robust validation checks and secure session management to ensure that vouchers could only be redeemed by eligible users.',
+                    liveLink: '#',
+                    githubLink: 'https://github.com/Shahfikri2605/capstoneVoucher2U.git'
+                }
+            };
+
+            if (projectId && projects[projectId]) {
+                const project = projects[projectId];
+                document.getElementById('project-title').textContent = project.title;
+                document.getElementById('project-tagline').textContent = project.tagline;
+                document.getElementById('project-image').src = project.image;
+                document.getElementById('project-long-description').textContent = project.description;
+                document.getElementById('project-category').textContent = project.category;
+                document.getElementById('project-tech').textContent = project.technologies;
+                document.getElementById('project-role').textContent = project.role;
+                document.getElementById('project-date').textContent = project.date;
+
+                const featuresList = document.getElementById('project-features');
+                featuresList.innerHTML = '';
+                project.features.forEach(feature => {
+                    const li = document.createElement('li');
+                    li.textContent = feature;
+                    featuresList.appendChild(li);
+                });
+
+                document.getElementById('project-challenges').textContent = project.challenges;
+                document.getElementById('project-live-link').href = project.liveLink;
+                document.getElementById('project-github-link').href = project.githubLink;
+            } else {
+                document.getElementById('project-title').textContent = 'Project Not Found';
+                document.getElementById('project-tagline').textContent = 'The requested project could not be found.';
+                document.querySelector('.project-content').innerHTML = '<p style="text-align: center; padding: 50px;">Please return to the <a href="myProject.html">My Projects</a> page to select a project.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

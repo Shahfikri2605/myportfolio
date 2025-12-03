@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Mohamad Shahfikri</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Shahfikri</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="myProject.html">My Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <div class="hero-content">
+            <h2>Contact Me</h2>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+        </div>
+    </section>
+
+    <section class="contact-details">
+        <div class="container">
+            <div class="contact-info-grid">
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>shahdam4444@gmail.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <h4>Phone</h4>
+                    <p>+60 19 865 9338</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Address</h4>
+                    <p>Kluang, Johor, Malaysia</p>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h3>Send Me a Message</h3>
+                <form action="https://formspree.io/f/xkgdbyro" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mohamad Shahfikri. All rights reserved.</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
